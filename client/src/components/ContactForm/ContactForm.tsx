@@ -17,7 +17,7 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hi Ace of Fades!%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Service Interested In:* ${formData.service}%0A*Message:* ${formData.message}`;
-    const whatsappUrl = `https://wa.me/923065055467?text=${text}`;
+    const whatsappUrl = `https://wa.me/923494588610?text=${text}`;
     window.open(whatsappUrl, '_blank');
   };
 

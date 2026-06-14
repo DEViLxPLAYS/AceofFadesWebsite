@@ -40,7 +40,7 @@ const Footer = () => {
               <h4>Contact</h4>
               <Link to="/faq">FAQ</Link>
               <Link to="/contact">Location</Link>
-              <a href="https://wa.me/923065055467" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href="https://wa.me/923494588610" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               <a href="https://www.instagram.com/aceoffades2024" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
             <div className={styles.linkColumn}>

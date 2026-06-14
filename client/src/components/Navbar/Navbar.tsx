@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
 
         <div className={styles.actions}>
-          <a href="https://wa.me/923065055467" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>
+          <a href="https://wa.me/923494588610" target="_blank" rel="noopener noreferrer" className={styles.bookBtn}>
             BOOK NOW
           </a>
           <button
@@ -100,7 +100,7 @@ const Navbar = () => {
                 </motion.div>
               ))}
               <motion.a
-                href="https://wa.me/923065055467"
+                href="https://wa.me/923494588610"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.mobileCta}

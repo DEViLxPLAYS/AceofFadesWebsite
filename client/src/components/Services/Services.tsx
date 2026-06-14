@@ -8,7 +8,7 @@ const standardServices = [
   { id: 5, name: 'Full Body Manicure & Pedicure with Haircut and Beard', price: 'Rs. 2,000', emoji: '✨' },
 ];
 
-const getWaLink = (service: string) => `https://wa.me/923065055467?text=I%20want%20to%20book%20a%20${encodeURIComponent(service)}`;
+const getWaLink = (service: string) => `https://wa.me/923494588610?text=I%20want%20to%20book%20a%20${encodeURIComponent(service)}`;
 
 const Services = () => {
   return (

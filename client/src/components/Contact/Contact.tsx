@@ -8,15 +8,15 @@ const contactInfo = [
     id: 1,
     icon: <MapPin size={20} />,
     label: 'Location',
-    value: 'Cheema Town Chowk, Gulberg Road, Bahawalpur, Pakistan',
+    value: 'Gulberg Road, chowk, near Al Kifaya super mart, Cheema Town Bahawalpur, Bahawalpur, 63100',
     link: null,
   },
   {
     id: 2,
     icon: <Phone size={20} />,
     label: 'Phone',
-    value: '0306-5055467',
-    link: 'tel:+923065055467',
+    value: '0349-4588610',
+    link: 'tel:+923494588610',
   },
   {
     id: 3,
@@ -107,7 +107,7 @@ const Contact = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/923065055467"
+              href="https://wa.me/923494588610"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialCircle}
