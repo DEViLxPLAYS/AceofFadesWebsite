@@ -22,13 +22,13 @@ const quickReplies = [
 const knowledgeBase: Record<string, string> = {
   hours: 'We are open Monday–Friday 9AM–8PM, Saturday 8AM–7PM, and Sunday 10AM–5PM.',
   opening: 'We are open Monday–Friday 9AM–8PM, Saturday 8AM–7PM, and Sunday 10AM–5PM.',
-  book: 'You can book an appointment by calling us at +44 (0) 123 456 7890, through WhatsApp, or by filling out our contact form on the website.',
-  appointment: 'You can book an appointment by calling us at +44 (0) 123 456 7890, through WhatsApp, or by filling out our contact form on the website.',
+  book: 'You can book an appointment by calling us at +92 349 4588610, through WhatsApp, or by filling out our contact form on the website.',
+  appointment: 'You can book an appointment by calling us at +92 349 4588610, through WhatsApp, or by filling out our contact form on the website.',
   services: 'We offer Signature Haircuts, Beard Sculpting, Hair Coloring, Scalp Treatments, Kids Cuts, and our Royal Package. Check the Services section for full details and pricing!',
   price: 'Our packages start from £25 (Classic), £45 (Premium), and £75 (Royal). Individual services start from £12 for kids cuts.',
   pricing: 'Our packages start from £25 (Classic), £45 (Premium), and £75 (Royal). Individual services start from £12 for kids cuts.',
-  location: 'We are located at 123 High Street, London, W1 2AB. There is free street parking and a car park a 2-minute walk away.',
-  where: 'We are located at 123 High Street, London, W1 2AB. There is free street parking and a car park a 2-minute walk away.',
+  location: 'We are located at Gulberg Road, chowk, near Al Kifaya super mart, Cheema Town Bahawalpur, Bahawalpur, 63100.',
+  where: 'We are located at Gulberg Road, chowk, near Al Kifaya super mart, Cheema Town Bahawalpur, Bahawalpur, 63100.',
   parking: 'Yes! There is free street parking on surrounding streets and a pay-and-display car park just a 2-minute walk from the salon.',
   walk: 'We welcome both walk-ins and appointments. We recommend booking in advance for weekends and peak hours.',
   kids: 'Absolutely! We welcome kids aged 3 and above. Our barbers are great with young clients. Kids cuts start from £12.',
@@ -43,7 +43,7 @@ const findResponse = (input: string): string => {
   for (const [key, value] of Object.entries(knowledgeBase)) {
     if (lower.includes(key)) return value;
   }
-  return "Thanks for your message! For specific enquiries, please call us at +44 (0) 123 456 7890 or use the contact form. We'd love to help you look your best! ✨";
+  return "Thanks for your message! For specific enquiries, please call us at +92 349 4588610 or use the contact form. We'd love to help you look your best! ✨";
 };
 
 const ChatBot = () => {
