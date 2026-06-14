@@ -1,0 +1,101 @@
+@use '../../styles/variables' as *;
+
+.formSection {
+  background: $color-bg;
+  padding: 60px 20px 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: $color-card;
+  border: $border-card;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: $shadow-lg;
+
+  @media (max-width: $bp-mobile) {
+    padding: 30px 20px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h2 {
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color-text;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: $color-text-muted;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+
+  input, select, textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(10, 10, 10, 0.02);
+    border: 1px solid rgba(10, 10, 10, 0.1);
+    border-radius: 8px;
+    font-family: $font-body;
+    font-size: 1rem;
+    color: $color-text;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $color-accent;
+      background: $color-white;
+      box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.05);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #25D366; // WhatsApp Green
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 18px;
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    background: #1ebc5a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+  }
+}

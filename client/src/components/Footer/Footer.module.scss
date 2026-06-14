@@ -1,0 +1,130 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: $color-card;
+  padding: 80px 60px 40px;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  @media (max-width: $bp-tablet) {
+    padding: 60px 30px 30px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 40px 20px 20px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  margin-bottom: 60px;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.brand {
+  max-width: 300px;
+}
+
+.brandDesc {
+  font-family: $font-body;
+  font-size: 0.9rem;
+  color: $color-text-card-muted;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  h4 {
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-text-card;
+    margin-bottom: 8px;
+  }
+
+  a, p {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    color: $color-text-card-muted;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0;
+  }
+
+  a:hover {
+    color: $color-white;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $bp-mobile) {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+.copyright {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  color: $color-text-card-muted;
+}
+
+.backToTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $color-text-card;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-accent;
+    transform: translateY(-2px);
+  }
+}

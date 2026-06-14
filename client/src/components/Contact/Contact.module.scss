@@ -1,0 +1,192 @@
+@use '../../styles/variables' as *;
+
+.contactSection {
+  position: relative;
+  padding: 120px 60px;
+  background: $color-bg;
+  overflow: hidden;
+
+  @media (max-width: $bp-tablet) {
+    padding: 80px 30px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 60px 20px;
+  }
+}
+
+.ghostText {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: $font-accent;
+  font-size: clamp(80px, 15vw, 220px);
+  color: rgba(10, 10, 10, 0.025);
+  letter-spacing: 10px;
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 0.8;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-family: $font-body;
+  font-size: 0.7rem;
+  color: $color-accent;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: block;
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoCard {
+  background: $color-card;
+  border: $border-card;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(10, 10, 10, 0.3);
+    transform: translateX(4px);
+  }
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: rgba(10, 10, 10, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-accent;
+  flex-shrink: 0;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .infoLabel {
+    font-family: $font-body;
+    font-size: 0.75rem;
+    color: $color-text-card-muted;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p, a {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: $color-text-card;
+    text-decoration: none;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: $color-accent;
+  }
+}
+
+/* Right Col - Spinning Logo */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.logoRingWrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outerRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(10, 10, 10, 0.1);
+  animation: rotate 20s linear infinite;
+}
+
+.innerRing {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(10, 10, 10, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-bg;
+  animation: rotate 20s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.socialRow {
+  display: flex;
+  gap: 12px;
+}
+
+.socialCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $color-card;
+  border: $border-card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-card;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+    background: rgba(10, 10, 10, 0.08);
+    transform: translateY(-3px);
+  }
+}

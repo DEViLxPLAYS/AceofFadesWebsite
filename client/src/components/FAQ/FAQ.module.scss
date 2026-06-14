@@ -1,0 +1,212 @@
+@use '../../styles/variables' as *;
+
+.faqSection {
+  padding: 120px 60px;
+  background: $color-bg-alt;
+
+  @media (max-width: $bp-tablet) {
+    padding: 80px 30px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 60px 20px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 80px;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  font-family: $font-body;
+  font-size: 0.7rem;
+  color: $color-accent;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: block;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  padding: 24px 0;
+  cursor: pointer;
+
+  &:hover {
+    .questionRow h3 {
+      color: $color-accent;
+    }
+  }
+
+  &.open {
+    .iconWrap {
+      background: $color-accent;
+      color: $color-white;
+      transform: rotate(45deg);
+    }
+    .questionRow h3 {
+      color: $color-accent;
+    }
+  }
+}
+
+.questionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-text;
+    transition: color 0.3s ease;
+  }
+}
+
+.iconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-accent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.answerWrap {
+  overflow: hidden;
+
+  p {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: $color-text-muted;
+    line-height: 1.8;
+    padding-top: 16px;
+    padding-right: 40px;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: relative;
+}
+
+.sidebarCard {
+  position: sticky;
+  top: 100px;
+  background: $color-card;
+  border: $border-card;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $bp-mobile) {
+    padding: 30px 20px;
+  }
+
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-text-card;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    color: $color-text-card-muted;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+}
+
+.logoCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.08);
+  border: 1px solid $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.waBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  background: #25d366;
+  color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  }
+}
+
+.callBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  background: transparent;
+  color: $color-text-card;
+  border: 1px solid #222;
+  padding: 16px;
+  border-radius: 4px;
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}

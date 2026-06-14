@@ -1,0 +1,32 @@
+{
+  "name": "ace-of-fades-server",
+  "version": "1.0.0",
+  "description": "Ace of Fades - Luxury Men's Salon API",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "helmet": "^8.0.0",
+    "compression": "^1.7.5",
+    "express-rate-limit": "^7.4.1",
+    "dotenv": "^16.4.5",
+    "@prisma/client": "^6.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "tsx": "^4.19.2",
+    "@types/express": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/compression": "^1.7.5",
+    "@types/node": "^22.9.0",
+    "prisma": "^6.1.0"
+  }
+}

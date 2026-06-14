@@ -1,0 +1,214 @@
+@use '../../styles/variables' as *;
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px 0; // Added top padding to push content down
+  overflow: hidden;
+
+  @media (max-width: $bp-tablet) {
+    padding: 140px 30px 0;
+    align-items: flex-start;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 120px 20px 0;
+  }
+}
+
+.layer1 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: transparent;
+}
+
+.layer2 {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: transparent;
+}
+
+.layer3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  z-index: 1;
+  font-family: $font-accent;
+  font-size: clamp(100px, 18vw, 280px);
+  color: rgba(10, 10, 10, 0.02);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: $color-accent;
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: $font-weight-medium;
+  margin-bottom: 24px;
+
+  .line {
+    width: 32px;
+    height: 1px;
+    background: $color-accent;
+  }
+}
+
+.h1 {
+  font-family: $font-heading;
+  font-size: clamp(52px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: $color-text;
+  margin-bottom: 24px;
+  font-weight: $font-weight-black;
+
+  .accent {
+    color: $color-accent;
+    font-style: italic;
+  }
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: $color-text-muted;
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 44px;
+  font-weight: $font-weight-light;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnA {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: $color-accent;
+  color: $color-white;
+  padding: 16px 36px;
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all $transition-base;
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    background: $color-accent-light;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(10, 10, 10, 0.15);
+
+    &::before {
+      left: 150%;
+    }
+  }
+}
+
+.btnB {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid $color-accent;
+  color: $color-text;
+  background: transparent;
+  padding: 16px 36px;
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all $transition-base;
+  text-decoration: none;
+
+  &:hover {
+    background: $color-accent-muted;
+    transform: translateY(-2px);
+  }
+}
+
+.bigLogoContainer {
+  margin-top: 60px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+
+  @media (max-width: $bp-mobile) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transform: scale(0.7);
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  span {
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    color: $color-text-muted;
+  }
+
+  .scrollLine {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, $color-accent, transparent);
+    animation: scrollPulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes scrollPulse {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.1% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}

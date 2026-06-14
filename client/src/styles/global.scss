@@ -1,0 +1,104 @@
+@import 'reset';
+@import 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
+
+body {
+  font-family: $font-body;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: $color-bg;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(10, 10, 10, 0.2);
+  color: $color-black;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-gray-400;
+  border-radius: 3px;
+  
+  &:hover {
+    background: $color-accent;
+  }
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: $font-weight-black;
+  text-align: center;
+  margin-bottom: $space-lg;
+  color: $color-text;
+  
+  .accent {
+    color: $color-accent;
+    font-style: italic;
+  }
+}
+
+.section-subtitle {
+  font-family: $font-body;
+  font-size: $font-size-md;
+  color: $color-text-muted;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto $space-3xl;
+  line-height: 1.8;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: 0.875rem 2rem;
+  background: $gradient-accent;
+  color: $color-white;
+  font-family: $font-body;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: $border-radius-sm;
+  transition: all $transition-base;
+  
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+    background: $color-accent-light;
+  }
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: $color-accent;
+  font-family: $font-body;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid $color-accent;
+  border-radius: $border-radius-sm;
+  transition: all $transition-base;
+  
+  &:hover {
+    background: $color-accent-muted;
+    box-shadow: $shadow-sm;
+    transform: translateY(-2px);
+  }
+}

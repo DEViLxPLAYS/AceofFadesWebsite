@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Booking {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  service   String
+  date      DateTime
+  time      String
+  notes     String?
+  status    String   @default("pending") // pending, confirmed, cancelled
+  createdAt DateTime @default(now())
+}
+
+model ChatMessage {
+  id        String   @id @default(uuid())
+  sessionId String
+  text      String
+  sender    String   // 'user' or 'bot'
+  createdAt DateTime @default(now())
+}

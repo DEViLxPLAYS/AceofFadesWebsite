@@ -1,0 +1,216 @@
+@use '../../styles/variables' as *;
+
+.about {
+  padding: 120px 60px;
+  background: $color-bg;
+  overflow: hidden;
+
+  @media (max-width: $bp-tablet) {
+    padding: 80px 30px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 60px 20px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+/* Left - Visual Display */
+.visualSide {
+  position: relative;
+}
+
+.visualCard {
+  position: relative;
+  height: 560px;
+  background: $color-card;
+  border: $border-card;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+  @media (max-width: $bp-mobile) {
+    height: 400px;
+    padding: 30px;
+  }
+
+  img {
+    filter: drop-shadow(0 0 40px rgba(10, 10, 10, 0.25));
+  }
+}
+
+.visualGradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.4), transparent 60%);
+  pointer-events: none;
+}
+
+.estTag {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: $color-accent;
+  color: $color-white;
+  padding: 10px 18px;
+  font-family: $font-body;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.floatingPills {
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: $bp-tablet) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+.pill {
+  background: $color-card;
+  border: $border-card;
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-md;
+
+  @media (max-width: $bp-tablet) {
+    flex: 1;
+    min-width: 120px;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .pillValue {
+    font-family: $font-accent;
+    font-size: 2rem;
+    color: $color-accent;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .pillLabel {
+    font-family: $font-body;
+    font-size: 0.68rem;
+    color: $color-text-card-muted;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* Right - Text Content */
+.textSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-family: $font-body;
+  font-size: 0.7rem;
+  color: $color-accent;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: $font-heading;
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 900;
+  color: $color-text;
+  line-height: 1.1;
+  margin-bottom: 30px;
+
+  .accent {
+    font-style: italic;
+    color: $color-accent;
+  }
+}
+
+.description {
+  font-family: $font-body;
+  font-size: 0.95rem;
+  color: $color-text-muted;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.ownerCard {
+  margin-top: 40px;
+  background: $color-card;
+  border: $border-card;
+  border-radius: 12px;
+  border-left: 3px solid $color-accent;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.08);
+  border: 2px solid $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-accent;
+  font-size: 1.4rem;
+  color: $color-accent;
+}
+
+.ownerInfo {
+  h4 {
+    font-family: $font-heading;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $color-text-card;
+    margin-bottom: 4px;
+  }
+
+  span {
+    font-family: $font-body;
+    font-size: 0.7rem;
+    color: $color-accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+}

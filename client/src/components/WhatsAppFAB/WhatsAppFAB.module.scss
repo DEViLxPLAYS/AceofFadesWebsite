@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.fab {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $z-fab;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+
+  @media (max-width: $bp-mobile) {
+    right: 16px;
+    bottom: 24px;
+    width: 50px;
+    height: 50px;
+    left: auto;
+  }
+}
+
+.pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.4);
+  animation: waPulse 2s ease-out infinite;
+}
+
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
