@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className={styles.container}>
         <Link to="/" className={styles.brand} onClick={() => setIsOpen(false)}>
-          <Logo size={220} className={styles.navLogo} />
+          <Logo size={120} className={styles.navLogo} />
           <span className={styles.wordmark}>
             ACE <span className={styles.accent}>OF</span> FADES
           </span>
