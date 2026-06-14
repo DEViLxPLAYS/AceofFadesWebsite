@@ -173,8 +173,11 @@
 .quickReplies {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem;
-  padding: 0 1rem 0.75rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .quickReply {

@@ -64,7 +64,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <Logo size={280} />
+          <Logo size={360} />
         </motion.div>
       </div>
 

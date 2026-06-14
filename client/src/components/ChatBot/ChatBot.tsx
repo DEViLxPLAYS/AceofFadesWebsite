@@ -191,32 +191,17 @@ const ChatBot = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            {messages.length <= 1 && (
-              <div className={styles.quickReplies}>
-                {quickReplies.map((reply) => (
-                  <button
-                    key={reply}
-                    className={styles.quickReply}
-                    onClick={() => sendMessage(reply)}
-                  >
-                    {reply}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            <form className={styles.inputBar} onSubmit={handleSubmit}>
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Type your message..."
-                className={styles.chatInput}
-              />
-              <button type="submit" className={styles.sendBtn} aria-label="Send message">
-                <Send size={16} />
-              </button>
-            </form>
+            <div className={styles.quickReplies}>
+              {quickReplies.map((reply) => (
+                <button
+                  key={reply}
+                  className={styles.quickReply}
+                  onClick={() => sendMessage(reply)}
+                >
+                  {reply}
+                </button>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

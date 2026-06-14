@@ -2,16 +2,16 @@
 
 .contactSection {
   position: relative;
-  padding: 120px 60px;
+  padding: 240px 60px 120px;
   background: $color-bg;
   overflow: hidden;
 
   @media (max-width: $bp-tablet) {
-    padding: 80px 30px;
+    padding: 200px 30px 80px;
   }
 
   @media (max-width: $bp-mobile) {
-    padding: 60px 20px;
+    padding: 180px 20px 60px;
   }
 }
 
