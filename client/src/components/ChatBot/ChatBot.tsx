@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
+import { MessageCircle, X, Sparkles } from 'lucide-react';
 import Logo from '../Logo';
 import styles from './ChatBot.module.scss';
 
@@ -56,7 +56,6 @@ const ChatBot = () => {
       timestamp: new Date(),
     },
   ]);
-  const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -80,7 +79,6 @@ const ChatBot = () => {
     };
 
     setMessages((prev) => [...prev, userMsg]);
-    setInput('');
     setIsTyping(true);
 
     // Try backend first, fallback to local
@@ -124,10 +122,7 @@ const ChatBot = () => {
     }, 1000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    sendMessage(input);
-  };
+
 
   return (
     <>
